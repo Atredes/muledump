@@ -312,7 +312,7 @@ td.cont > div {
 }
 
 /* stars */
-.scont {
+.scont, .current_fame, .f_tooltip_callout:hover span {
 	background-color: #222;
 	border-radius: 6px;
 	float: left;
@@ -327,6 +327,31 @@ td.cont > div {
 	margin: 0 0.1em 0 0.2em;
 }
 
+
+.current_fame {
+	background: #222 url(fame.png)no-repeat 90% 50%;
+	padding: 1px 18px 1px 4px;
+ }
+
 .warn {
 	color: #d70;
+}
+
+
+.f_tooltip_callout:hover {border-radius: 6px 6px 0px 0px;}
+.f_tooltip_callout span {
+	display:none; 
+	}
+.f_tooltip_callout:hover span{
+	display:inline; position:absolute; 
+	background: #222 url(fame.png)no-repeat 95% 50%;
+	border-radius: 0px 6px 6px 6px;
+	padding: 1px 20px 1px 4px;
+	margin-top: 17px;
+	left:2px;
+}
+.f_tooltip {z-index:20;}
+.f_tooltip:before {
+   content: "Total fame earned: ";
+   font-size:11px;
 }
